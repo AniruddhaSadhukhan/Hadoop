@@ -1,0 +1,69 @@
+To start HBase, follow below commands:  
+
+	i) cd /usr/lib/hbase-0.96.2-hadoop2/
+
+       ii) ./bin/start-hbase.sh
+
+      iii) hbase shell
+
+==================================================
+list
+
+create 'emp','personal','address' //tablename,colfamily...
+
+describe 'emp'
+
+put 'emp' , 'e1' , 'personal:FN','ani'
+put 'emp' , 'e1' , 'personal:LN','sadhukhan'
+put 'emp' , 'e1' , 'address:city','kolkata'
+
+put 'emp' , 'e2' , 'personal:FN','jack'
+put 'emp' , 'e2' , 'personal:MN','reacher'
+put 'emp' , 'e2' , 'address:city','london'
+
+scan 'emp'
+
+get 'emp','e2'
+
+
+disable 'emp' //to add new colfamily,first disable table
+alter 'emp',{NAME=>'contact',VERSIONS=>3}
+enable 'emp'
+
+disable 'emp' //to add new colfamily,first disable table
+alter 'emp',{NAME=>'contact',METHOD=>'delete'}
+enable 'emp'
+
+
+put 'emp' , 'e1' , 'contact:cell','80267463873'
+put 'emp' , 'e1' , 'contact:cell','98667463873'
+put 'emp' , 'e1' , 'contact:cell','66667463873'
+
+
+
+
+
+get 'emp','e1',{COLUMN=>'contact:cell'}
+get 'emp','e1',{COLUMN=>'contact:cell',VERSIONS=>3} //want to see newest 3 versions
+get 'emp','e1',{COLUMN=>'contact:cell',TIMESTAMP=>1530678158278}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

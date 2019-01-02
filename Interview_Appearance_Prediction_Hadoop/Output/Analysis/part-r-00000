@@ -1,0 +1,6 @@
+Observed yes , Predicted yes : 650
+Observed yes , Predicted no  : 111
+Observed no  , Predicted yes : 214
+Observed no  , Predicted no  : 216
+
+Accuracy : 72.712006%

@@ -1,0 +1,227 @@
+x10_no	44	25
+x10_yes	745	419
+x11_no	314	166
+x11_yes	475	278
+x12_na	100	98
+x12_no	6	73
+x12_uncertain	32	33
+x12_yes	651	240
+x13_na	103	161
+x13_no	0	7
+x13_uncertain	13	8
+x13_yes	673	268
+x14_na	103	164
+x14_no	4	6
+x14_uncertain	4	0
+x14_yes	678	274
+x15_na	103	164
+x15_no	8	19
+x15_uncertain	0	2
+x15_yes	678	259
+x16_na	104	164
+x16_no	2	14
+x16_uncertain	1	6
+x16_yes	682	260
+x17_na	104	164
+x17_no	2	13
+x17_uncertain	1	1
+x17_yes	682	266
+x18_na	103	162
+x18_no	3	14
+x18_uncertain	3	13
+x18_yes	680	255
+x19_na	3	14
+x19_no	1	92
+x19_uncertain	119	119
+x19_yes	666	219
+x1_020916	27	16
+x1_021215	11	8
+x1_030415	7	23
+x1_030616	8	6
+x1_040415	5	6
+x1_040516	1	0
+x1_041216	59	27
+x1_050215	4	3
+x1_050516	5	0
+x1_051116	13	12
+x1_060216	148	72
+x1_060516	3	0
+x1_070516	26	8
+x1_070616	12	0
+x1_080516	2	1
+x1_090116	18	3
+x1_090415	2	3
+x1_100516	5	4
+x1_110516	12	7
+x1_120416	0	1
+x1_120417	1	0
+x1_120418	0	1
+x1_120419	1	0
+x1_120420	1	0
+x1_120421	0	1
+x1_120422	1	0
+x1_120423	1	0
+x1_130215	4	6
+x1_130315	2	11
+x1_130416	50	34
+x1_130616	10	5
+x1_140116	19	9
+x1_150316	2	4
+x1_160415	4	0
+x1_170315	14	2
+x1_170415	6	3
+x1_180314	4	0
+x1_180316	1	1
+x1_190316	12	7
+x1_190615	10	8
+x1_200316	1	1
+x1_200816	17	8
+x1_210316	6	1
+x1_210415	2	2
+x1_210416	39	15
+x1_220116	22	12
+x1_220316	8	6
+x1_220416	5	2
+x1_230216	11	11
+x1_230416	3	2
+x1_230615	5	3
+x1_240516	2	0
+x1_250316	0	5
+x1_250516	46	19
+x1_250615	27	16
+x1_260216	14	12
+x1_260516	1	2
+x1_270216	13	13
+x1_280816	13	7
+x1_290615	7	4
+x1_300116	29	10
+x1_300516	7	1
+x20_m	312	184
+x20_s	477	260
+x2_anz	20	2
+x2_aonhewitt	24	4
+x2_aonhewittgurgaon	2	0
+x2_astrazeneca	10	5
+x2_barclays	5	0
+x2_flextronics	15	8
+x2_hewitt	12	8
+x2_hospira	35	40
+x2_pfizer	51	24
+x2_prodapt	6	11
+x2_standardcharteredbank	580	324
+x2_standardcharteredbankchennai	10	7
+x2_ust	10	8
+x2_williamslea	8	3
+x2_wooribank	1	0
+x3_bfsi	616	333
+x3_electronics	15	8
+x3_it	8	3
+x3_itproductsandservices	34	11
+x3_itservices	14	9
+x3_pharmaceuticals	96	69
+x3_telecom	6	11
+x4_bangalore	193	99
+x4_chennai	526	318
+x4_cochin	6	3
+x4_delhi	1	0
+x4_gurgaon	22	11
+x4_gurgaonr	1	0
+x4_hyderabad	26	12
+x4_noida	14	1
+x5_aml	5	3
+x5_dotnet	10	8
+x5_niche	120	43
+x5_productionsterile	0	5
+x5_routine	643	380
+x5_seleniumtesting	4	1
+x5_tradefinance	7	4
+x6_"- sapbo	4	0
+x6_"java	21	12
+x6_"java 	3	1
+x6_"sccm-(network	1	0
+x6_10.00 am	0	1
+x6_11.30 am	3	0
+x6_12.30 pm	1	0
+x6_9.00 am	0	1
+x6_9.30 am	1	0
+x6_accounting operations	53	33
+x6_als testing	10	5
+x6_aml/kyc/cdd	50	34
+x6_analytical r & d	10	3
+x6_analytical r&d	1	2
+x6_automation testing java	4	3
+x6_banking operations	21	3
+x6_basesas program/ reporting	1	0
+x6_biosimilars	8	2
+x6_cdd kyc	27	25
+x6_core java	10	7
+x6_cots	4	0
+x6_cots developer	2	11
+x6_dot net	7	2
+x6_emea	6	0
+x6_etl	6	3
+x6_fresher	59	27
+x6_generic drugs – ra	3	1
+x6_global labelling	3	3
+x6_hadoop	12	0
+x6_java	15	6
+x6_java 	8	2
+x6_java developer	14	11
+x6_java j2ee	22	27
+x6_java jsf	2	2
+x6_java tech lead	3	3
+x6_java-sas	2	3
+x6_java/j2ee	9	1
+x6_java/j2ee/core java	4	2
+x6_java/j2ee/struts/hibernate	148	72
+x6_java/spring/hibernate/jsf	30	12
+x6_l & l	2	0
+x6_lcm -manager	1	1
+x6_lendingliablities	15	16
+x6_licensing – ra	3	1
+x6_manager	1	0
+x6_oracle	27	16
+x6_oracle plsql	13	12
+x6_product control	5	0
+x6_production	5	3
+x6_production support - sccm	2	0
+x6_publishing	7	2
+x6_ra label	1	1
+x6_ra publishing	7	2
+x6_regulatory	10	2
+x6_routine	26	21
+x6_sas	18	9
+x6_sccm	8	7
+x6_sccm – sharepoint	0	1
+x6_sccm – sql	1	0
+x6_sccm- desktop support	4	0
+x6_sccm- networking	1	0
+x6_senior analyst	2	3
+x6_senior software engineer-mednet	8	7
+x6_sr automation testing	8	5
+x6_submission management	1	1
+x6_t-24 developer	12	3
+x6_tech lead- mednet	1	0
+x6_tech lead-mednet	4	4
+x6_technical lead	0	1
+x6_testing	5	6
+x6_tl	3	0
+x7_ informatica"	4	0
+x7_ j2ee"	0	2
+x7_ sharepoint	1	0
+x7_ spring	2	0
+x7_ sql"	2	1
+x7_ xml	3	0
+x7_j2ee	4	2
+x7_j2ee"	4	6
+x7_scheduled 	241	112
+x7_scheduledwalkin	398	227
+x7_spring	3	0
+x7_sql"	6	2
+x7_walkin	104	85
+x7_walkin 	17	7
+x8_female	194	109
+x8_male	595	335
+x9_no	81	41
+x9_yes	708	403
+y	789	444

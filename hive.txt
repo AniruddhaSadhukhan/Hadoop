@@ -1,0 +1,103 @@
+Always start from same directory
+
+[edureka@localhost ~]$ mkdir aniHive
+[edureka@localhost ~]$ cd aniHive/
+[edureka@localhost aniHive]$ hive
+hive> !clear;	//for linux cmd,use !cmd;
+
+
+--------------------------------------------------
+
+
+create database anidb;
+
+create database anidb2;
+
+show databases;
+
+use anidb;	//only one db can be opened at a time
+
+show tables;
+
+set hive.cli.print.current.db = true;
+
+create table stockprices(symbol varchar(5),dt varchar(20),price float) 
+row format delimited
+fields terminated by ',';
+
+select * from stockprices;
+
+load data inpath '/user/edureka/stocksdir/stockprices.csv' overwrite into table stockprices; ==>data in HDFS(HDFS to HDFS),original source file deleted
+
+select symbol from stockprices;
+
+drop table stockprices;
+
+load data local inpath '/home/edureka/stockprices.csv' overwrite into table stockprices; ==>data in local machine(Local to HDFS),original source file remains
+
+create table stockprices(symbol varchar(5),dt varchar(20),price float) 
+row format delimited
+fields terminated by ','
+location '/user/edureka/hivedata1/stocks'; ==>hdfs path,data is not copied/moved to warehouse,droping it will delete this folder
+
+***************************
+hivedata1
+	->stocks
+		*stockprices.csv
+	->symbol
+		*symbolmaster.csv
+***************************
+describe extended stockprices;
+
+create external table stockprices1(symbol varchar(5),dt varchar(20),price float)
+row format delimited
+fields terminated by ','
+location '/user/edureka/hivedata1/stocks';
+
+describe extended stockprices1;
+
+create external table symbolmaster1(symbol varchar(5),cname varchar(40),ph varchar(10),hq varchar(20))
+row format delimited
+fields terminated by ','
+location '/user/edureka/hivedata1/symbol';
+
+select symbol,price from stockprices1 order by price;
+
+select price from stockprices1 where symbol='tcs';
+
+select symbol,avg(price) as avgprice from stockprices1 group by symbol;
+select symbol,variance(price) as avgprice,max(price) as maxprice from stockprices1 group by symbol having symbol='infy';
+
+========================================================
+joining
+
+select a.symbol,cname from stockprices1 a join symbolmaster1 b on (a.symbol=b.symbol);
+
+========================================================
+*Partition*
+set hive.exec.dynamic.partition=true;
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+
+
+create table stockprices1part(dt varchar(20),price float)
+partitioned by (symbol varchar(5))	
+row format delimited
+fields terminated by ',';//must not be an external table but always managed table and location cant be mentioned//colname mustnt be mentioned in regular col name
+
+insert overwrite table stockprices1part partition(symbol) select dt,price,symbol from stockprices1; //partitioning colm must be at last and nonpartitioned table must be there previously
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

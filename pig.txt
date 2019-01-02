@@ -1,0 +1,64 @@
+stock = LOAD 'stocksdir/stockprices.csv' USING  PigStorage(',');
+
+stock1 = FOREACH stock GENERATE $0,$2;
+-------------------------------------------------------------------------------------------------------------------
+
+stock = LOAD 'stocksdir/stockprices.csv' USING  PigStorage(',') AS (symbol:chararray,date:chararray,price:float);
+
+Describe stock
+
+stock1 = FOREACH stock GENERATE symbol,price;
+
+Dump stock1
+
+-------------------------------------------------------------------------------------------------------------------
+
+stock1 = FOREACH stock GENERATE symbol,SQRT(price),price*0.1 as price1;
+
+stock2 = filter stock1 by symbol == 'tcs';
+
+stock3 = order stock2 by price desc;
+dump stock3;
+-------------------------------------------------------------------------------------------------------------------
+
+stock_1 = group stock by symbol;
+
+stock_2 = foreach stock_1 generate group,COUNT(stock);
+
+stock_3 = foreach stock_1 generate UPPER(group),AVG(stock.price);
+
+===================================================================================================================
+
+stocks = LOAD 'stocksdir/stockprices.csv' USING  PigStorage(',') AS (symbol:chararray,date:chararray,price:float);
+
+symmaster = LOAD 'stocksdir/symbolmaster.csv' USING  PigStorage(',') AS (symbol:chararray,cname:chararray,phone:chararray,hq:chararray);
+
+joined = JOIN stocks by symbol , symmaster by symbol; //inner join
+
+dump joined
+
+describe joined
+
+jproj = FOREACH joined GENERATE date,price, stocks::symbol;//no need for relation name in case of unique columns
+
+dump jproj
+
+jproj = FOREACH joined GENERATE date,price, stocks::symbol parallel 20;//set no of reducer(here 20)
+
+set default_parallel 10; //set default reducer no 
+
+STORE jproj into 'joinedout';
+
+jproj = FOREACH joined GENERATE stocks::symbol,cname,price parallel 3;
+
+STORE jproj into 'joinedout1' using PigStorage(',');
+
+rjoined = JOIN stocks by symbol right , symmaster by symbol;//(right/left/full outer)
+
+fjoined = JOIN stocks by symbol full outer , symmaster by symbol;
+
+history
+
+
+
+
